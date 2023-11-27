@@ -225,8 +225,10 @@ export default component$(() => {
             </ul>
           </nav>
         </aside>
-        <main class='min-h-[calc(100vh-60px)] border-l border-solid border-border'>
-          <Slot />
+        <main class='flex min-h-[calc(100vh-60px)] w-[calc(100vw-300px)] justify-center border-l border-solid border-border py-[40px]'>
+          <div class='flex w-min flex-col'>
+            <Slot />
+          </div>
         </main>
       </div>
     </div>
