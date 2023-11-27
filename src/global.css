@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Source+Code+Pro:wght@200&display=swap');
 @import 'tailwindcss/base';
 
 @tailwind base;
@@ -18,7 +18,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   background-color: #f5f5f5;
   color: #000000;
 }
