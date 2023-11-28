@@ -62,7 +62,7 @@ export default component$(() => {
               }
             >
               <div class='flex items-center justify-between pb-[3px]'>
-                <h2 class='text-[20px]'>{project.title}</h2>
+                <h3 class='text-[20px]'>{project.title}</h3>
                 <ul class='flex items-center justify-between'>
                   <li>
                     <Link

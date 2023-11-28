@@ -8,11 +8,11 @@ export default component$(() => {
   })
 
   return (
-    <div class='w-min'>
-      <section class='w-max'>
+    <div class='max-w-[600px]'>
+      <section>
         <h2
           class={
-            'text-[23px] transition-opacity duration-500 sm:text-[42px] ' +
+            'text-[32px] transition-opacity duration-500 ' +
             (mounted.value ? 'opacity-100' : 'opacity-0')
           }
         >
@@ -20,12 +20,11 @@ export default component$(() => {
         </h2>
         <h3
           class={
-            'text-[17.5px] font-extralight transition-opacity delay-200 duration-500 sm:text-[16px] ' +
+            'text-[20px] font-extralight transition-opacity delay-200 duration-500 ' +
             (mounted.value ? 'opacity-100' : 'opacity-0')
           }
         >
-          A high school student with
-          <br class='sm:hidden' /> a passion for programming
+          A high school student with a passion for programming
         </h3>
       </section>
       <hr
@@ -37,15 +36,15 @@ export default component$(() => {
       <section>
         <h2
           class={
-            'mb-[10px] text-[32px] transition-opacity delay-600 duration-500 ' +
+            'text-[32px] transition-opacity delay-600 duration-500 ' +
             (mounted.value ? 'opacity-100' : 'opacity-0')
           }
         >
           About
         </h2>
-        <p
+        <h3
           class={
-            'text-[16px] font-extralight transition-opacity delay-[800ms] duration-700 ' +
+            'text-[20px] font-extralight transition-opacity delay-[800ms] duration-700 ' +
             (mounted.value ? 'opacity-100' : 'opacity-0')
           }
         >
@@ -53,7 +52,7 @@ export default component$(() => {
           engineering and computer science. The focus of my work has been
           primarily in full stack web development, but I also have varying
           levels of experience in Python, Java, C++, and Rust.
-        </p>
+        </h3>
       </section>
     </div>
   )
