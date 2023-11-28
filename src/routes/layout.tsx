@@ -21,18 +21,70 @@ export default component$(() => {
     {
       title: 'index.tsx',
       pathname: '/',
+      icon: component$(() => {
+        return (
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            height='32'
+            viewBox='0 -960 960 960'
+            width='32'
+            class='fill-primary'
+          >
+            <path d='M160-120v-480l320-240 320 240v480H560v-280H400v280H160Z' />
+          </svg>
+        )
+      }),
     },
     {
       title: 'skills.tsx',
       pathname: '/skills/',
+      icon: component$(() => {
+        return (
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            height='32'
+            viewBox='0 -960 960 960'
+            width='32'
+            class='fill-primary'
+          >
+            <path d='M840-280v-276L480-360 40-600l440-240 440 240v320h-80ZM480-120 200-272v-200l280 152 280-152v200L480-120Z' />
+          </svg>
+        )
+      }),
     },
     {
       title: 'projects.tsx',
       pathname: '/projects/',
+      icon: component$(() => {
+        return (
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            height='32'
+            viewBox='0 -960 960 960'
+            width='32'
+            class='fill-primary'
+          >
+            <path d='M480-80q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-200v-80h320v80H320Zm10-120q-69-41-109.5-110T180-580q0-125 87.5-212.5T480-880q125 0 212.5 87.5T780-580q0 81-40.5 150T630-320H330Z' />
+          </svg>
+        )
+      }),
     },
     {
       title: 'contact.tsx',
       pathname: '/contact/',
+      icon: component$(() => {
+        return (
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            height='32'
+            viewBox='0 -960 960 960'
+            width='32'
+            class='fill-primary'
+          >
+            <path d='M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280 320-200v-80L480-520 160-720v80l320 200Z' />
+          </svg>
+        )
+      }),
     },
   ] as const
 
@@ -64,13 +116,13 @@ export default component$(() => {
 
   return (
     <div class='min-h-screen bg-background text-primary'>
-      <header class='flex h-[60px] items-center border-b border-solid border-border'>
-        <div class='flex h-full w-[300px] items-center justify-between px-[15px] text-[18px]'>
+      <header class='border-border sticky top-0 flex h-[60px] items-center border-b border-solid bg-background'>
+        <div class='md:w-[300px] flex h-full w-full items-center justify-between px-[15px] text-[18px] sm:w-[225px]'>
           <h1>Owen Wood</h1>
           <ul class='flex items-center justify-between'>
             <li class='pr-[3px]'>
               <Link
-                class='cursor-pointer'
+                class='hover:bg-border flex cursor-pointer items-center justify-center rounded-[5px] p-[5px] pr-[3px] duration-200'
                 href='https://github.com/PiWizard3852'
                 target='_blank'
               >
@@ -87,10 +139,10 @@ export default component$(() => {
                 </svg>
               </Link>
             </li>
-            <li class='pl-[3px]'>
+            <li class='hover:bg-border flex cursor-pointer items-center justify-center rounded-[5px] p-[5px] pl-[3px] duration-200'>
               <Link
                 class='cursor-pointer'
-                href='https://www.linkedin.com/in/owen-wood-107658283/'
+                href='https://www.linkedin.com/in/owen-wood-3141592653589793238/'
                 target='_blank'
               >
                 <svg
@@ -108,8 +160,8 @@ export default component$(() => {
             </li>
           </ul>
         </div>
-        <nav class='flex h-full w-[calc(100%-300px)] items-center overflow-x-auto border-l border-solid border-border px-[15px]'>
-          <ul class='flex'>
+        <nav class='border-border md:w-[calc(100%-300px)] hidden h-full w-[calc(100%-225px)] items-center overflow-x-auto border-l border-solid px-[15px] sm:flex'>
+          <ul class='md:flex hidden'>
             {Array.from(openPages.value).map((page, index) => (
               <li
                 key={index}
@@ -117,7 +169,7 @@ export default component$(() => {
               >
                 <button
                   class={
-                    'cursor-pointer rounded-[5px] border border-solid border-border px-[10px] py-[5px] ' +
+                    'border-border cursor-pointer rounded-[5px] border border-solid px-[10px] py-[5px] ' +
                     (page.title === activePage.value &&
                     openPages.value.size !== 1
                       ? 'pr-[32px]'
@@ -176,10 +228,34 @@ export default component$(() => {
               </li>
             ))}
           </ul>
+          <ul class='md:hidden hidden sm:flex'>
+            {pages.map((page, index) => (
+              <li
+                key={index}
+                class='flex items-center'
+              >
+                <Link
+                  class='border-border mr-[16px] cursor-pointer rounded-[5px] border border-solid px-[10px] py-[5px]'
+                  href={page.pathname}
+                >
+                  <h2
+                    class={
+                      'duration-200 ' +
+                      (page.title === activePage.value
+                        ? 'text-primary'
+                        : 'text-secondary')
+                    }
+                  >
+                    {page.title}
+                  </h2>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
       </header>
       <div class='flex'>
-        <aside class='min-h-[calc(100vh-60px)] w-[300px] overflow-y-auto p-[15px]'>
+        <aside class='md:sticky md:block md:top-[60px] hidden h-[calc(100vh-60px)] w-[300px] overflow-y-auto p-[15px]'>
           <nav>
             <ul>
               {pages.map((page, index) => (
@@ -188,7 +264,7 @@ export default component$(() => {
                   class='pb-[15px]'
                 >
                   <Link
-                    class='flex cursor-pointer items-center rounded-[5px] px-[10px] py-[5px] duration-200 hover:bg-border'
+                    class='hover:bg-border flex cursor-pointer items-center rounded-[5px] px-[10px] py-[5px] duration-200'
                     href={page.pathname}
                   >
                     <svg
@@ -225,12 +301,35 @@ export default component$(() => {
             </ul>
           </nav>
         </aside>
-        <main class='flex min-h-[calc(100vh-60px)] w-[calc(100vw-300px)] justify-center border-l border-solid border-border py-[40px]'>
+        <main class='md:border-border md:border-l md:border-solid md:w-[calc(100vw-300px)] flex min-h-[calc(100vh-120px)] w-full justify-center py-[40px] sm:min-h-[calc(100vh-60px)]'>
           <div class='flex w-min flex-col'>
             <Slot />
           </div>
         </main>
       </div>
+      <footer class='border-border sticky bottom-0 border-t border-solid bg-background sm:hidden'>
+        <nav>
+          <ul class='flex h-[60px] items-center justify-evenly'>
+            {pages.map((page, index) => (
+              <li key={index}>
+                <button
+                  class={
+                    'flex cursor-pointer items-center justify-center rounded-[5px] p-[5px] duration-200 ' +
+                    (page.title === activePage.value
+                      ? 'bg-border'
+                      : 'hover:bg-border')
+                  }
+                  onClick$={() => {
+                    setTimeout(() => navigate(page.pathname))
+                  }}
+                >
+                  <page.icon />
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </footer>
     </div>
   )
 })

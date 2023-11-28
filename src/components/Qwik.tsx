@@ -8,6 +8,10 @@ export const RouterHead = component$(() => {
   return (
     <>
       <title>Owen Wood</title>
+      <meta
+        name='description'
+        content='I am a student at Phillips Exeter Academy with an interest in software engineering and computer science. The focus of my work has been primarily in web development, but I also have varying levels of experience in Python, Java, C++, and Rust.'
+      />
       <link
         rel='canonical'
         href={location.url.href}
