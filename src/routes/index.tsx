@@ -51,7 +51,7 @@ export default component$(() => {
         >
           I am a student at Phillips Exeter Academy with an interest in software
           engineering and computer science. The focus of my work has been
-          primarily in full-stack web development, but I also have varying
+          primarily in full stack web development, but I also have varying
           levels of experience in Python, Java, C++, and Rust.
         </p>
       </section>

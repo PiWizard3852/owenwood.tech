@@ -36,23 +36,6 @@ export default component$(() => {
       }),
     },
     {
-      title: 'skills.tsx',
-      pathname: '/skills/',
-      icon: component$(() => {
-        return (
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            height='32'
-            viewBox='0 -960 960 960'
-            width='32'
-            class='fill-primary'
-          >
-            <path d='M840-280v-276L480-360 40-600l440-240 440 240v320h-80ZM480-120 200-272v-200l280 152 280-152v200L480-120Z' />
-          </svg>
-        )
-      }),
-    },
-    {
       title: 'projects.tsx',
       pathname: '/projects/',
       icon: component$(() => {
@@ -116,13 +99,13 @@ export default component$(() => {
 
   return (
     <div class='min-h-screen bg-background text-primary'>
-      <header class='border-border sticky top-0 flex h-[60px] items-center border-b border-solid bg-background'>
-        <div class='md:w-[300px] flex h-full w-full items-center justify-between px-[15px] text-[18px] sm:w-[225px]'>
+      <header class='sticky top-0 flex h-[60px] items-center border-b border-solid border-border bg-background'>
+        <div class='flex h-full w-full items-center justify-between px-[15px] text-[18px] sm:w-[225px] md:w-[300px]'>
           <h1>Owen Wood</h1>
           <ul class='flex items-center justify-between'>
             <li class='pr-[3px]'>
               <Link
-                class='hover:bg-border flex cursor-pointer items-center justify-center rounded-[5px] p-[5px] pr-[3px] duration-200'
+                class='flex cursor-pointer items-center justify-center rounded-[5px] p-[5px] pr-[3px] duration-200 hover:bg-border'
                 href='https://github.com/PiWizard3852'
                 target='_blank'
               >
@@ -139,7 +122,7 @@ export default component$(() => {
                 </svg>
               </Link>
             </li>
-            <li class='hover:bg-border flex cursor-pointer items-center justify-center rounded-[5px] p-[5px] pl-[3px] duration-200'>
+            <li class='flex cursor-pointer items-center justify-center rounded-[5px] p-[5px] pl-[3px] duration-200 hover:bg-border'>
               <Link
                 class='cursor-pointer'
                 href='https://www.linkedin.com/in/owen-wood-3141592653589793238/'
@@ -160,8 +143,8 @@ export default component$(() => {
             </li>
           </ul>
         </div>
-        <nav class='border-border md:w-[calc(100%-300px)] hidden h-full w-[calc(100%-225px)] items-center overflow-x-auto border-l border-solid px-[15px] sm:flex'>
-          <ul class='md:flex hidden'>
+        <nav class='hidden h-full w-[calc(100%-225px)] items-center overflow-x-auto border-l border-solid border-border px-[15px] sm:flex md:w-[calc(100%-300px)]'>
+          <ul class='hidden md:flex'>
             {Array.from(openPages.value).map((page, index) => (
               <li
                 key={index}
@@ -169,7 +152,7 @@ export default component$(() => {
               >
                 <button
                   class={
-                    'border-border cursor-pointer rounded-[5px] border border-solid px-[10px] py-[5px] ' +
+                    'cursor-pointer rounded-[5px] border border-solid border-border px-[10px] py-[5px] ' +
                     (page.title === activePage.value &&
                     openPages.value.size !== 1
                       ? 'pr-[32px]'
@@ -228,14 +211,14 @@ export default component$(() => {
               </li>
             ))}
           </ul>
-          <ul class='md:hidden hidden sm:flex'>
+          <ul class='hidden sm:flex md:hidden'>
             {pages.map((page, index) => (
               <li
                 key={index}
                 class='flex items-center'
               >
                 <Link
-                  class='border-border mr-[16px] cursor-pointer rounded-[5px] border border-solid px-[10px] py-[5px]'
+                  class='mr-[16px] cursor-pointer rounded-[5px] border border-solid border-border px-[10px] py-[5px]'
                   href={page.pathname}
                 >
                   <h2
@@ -255,7 +238,7 @@ export default component$(() => {
         </nav>
       </header>
       <div class='flex'>
-        <aside class='md:sticky md:block md:top-[60px] hidden h-[calc(100vh-60px)] w-[300px] overflow-y-auto p-[15px]'>
+        <aside class='hidden h-[calc(100vh-60px)] w-[300px] overflow-y-auto p-[15px] md:sticky md:top-[60px] md:block'>
           <nav>
             <ul>
               {pages.map((page, index) => (
@@ -264,7 +247,7 @@ export default component$(() => {
                   class='pb-[15px]'
                 >
                   <Link
-                    class='hover:bg-border flex cursor-pointer items-center rounded-[5px] px-[10px] py-[5px] duration-200'
+                    class='flex cursor-pointer items-center rounded-[5px] px-[10px] py-[5px] duration-200 hover:bg-border'
                     href={page.pathname}
                   >
                     <svg
@@ -301,13 +284,13 @@ export default component$(() => {
             </ul>
           </nav>
         </aside>
-        <main class='md:border-border md:border-l md:border-solid md:w-[calc(100vw-300px)] flex min-h-[calc(100vh-120px)] w-full justify-center py-[40px] sm:min-h-[calc(100vh-60px)]'>
+        <main class='flex min-h-[calc(100vh-120px)] w-full justify-center py-[40px] sm:min-h-[calc(100vh-60px)] md:w-[calc(100vw-300px)] md:border-l md:border-solid md:border-border'>
           <div class='flex w-min flex-col'>
             <Slot />
           </div>
         </main>
       </div>
-      <footer class='border-border sticky bottom-0 border-t border-solid bg-background sm:hidden'>
+      <footer class='sticky bottom-0 border-t border-solid border-border bg-background sm:hidden'>
         <nav>
           <ul class='flex h-[60px] items-center justify-evenly'>
             {pages.map((page, index) => (
