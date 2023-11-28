@@ -16,7 +16,7 @@ export default component$(() => {
             (mounted.value ? 'opacity-100' : 'opacity-0')
           }
         >
-          Hello, I'm Owen Wood
+          Hello, I'm Owen Wood,
         </h2>
         <h3
           class={
@@ -24,7 +24,7 @@ export default component$(() => {
             (mounted.value ? 'opacity-100' : 'opacity-0')
           }
         >
-          A high school student with a passion for programming
+          a high school student with a passion for programming.
         </h3>
       </section>
       <hr
