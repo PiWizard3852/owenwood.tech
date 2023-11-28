@@ -284,8 +284,8 @@ export default component$(() => {
             </ul>
           </nav>
         </aside>
-        <main class='flex min-h-[calc(100vh-120px)] w-full justify-center py-[40px] sm:min-h-[calc(100vh-60px)] md:w-[calc(100vw-300px)] md:border-l md:border-solid md:border-border'>
-          <div class='flex w-min flex-col'>
+        <main class='flex min-h-[calc(100vh-120px)] w-full justify-center p-[40px] sm:min-h-[calc(100vh-60px)] md:w-[calc(100vw-300px)] md:border-l md:border-solid md:border-border'>
+          <div class='flex flex-col'>
             <Slot />
           </div>
         </main>

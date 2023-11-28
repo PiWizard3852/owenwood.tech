@@ -8,8 +8,8 @@ export default component$(() => {
   })
 
   return (
-    <>
-      <section class='mb-[40px] w-max'>
+    <div class='w-min'>
+      <section class='w-max'>
         <h2
           class={
             'text-[23px] transition-opacity duration-500 sm:text-[42px] ' +
@@ -20,7 +20,7 @@ export default component$(() => {
         </h2>
         <h3
           class={
-            'text-[17.5px] font-extralight transition-opacity delay-[200ms] duration-500 sm:text-[16px] ' +
+            'text-[17.5px] font-extralight transition-opacity delay-200 duration-500 sm:text-[16px] ' +
             (mounted.value ? 'opacity-100' : 'opacity-0')
           }
         >
@@ -30,14 +30,14 @@ export default component$(() => {
       </section>
       <hr
         class={
-          'transition-opacity delay-[400ms] duration-500 ' +
+          'my-[40px] transition-opacity delay-400 duration-500 ' +
           (mounted.value ? 'opacity-100' : 'opacity-0')
         }
       />
-      <section class='mt-[23px]'>
+      <section>
         <h2
           class={
-            'mb-[10px] text-[32px] transition-opacity delay-[600ms] duration-500 ' +
+            'mb-[10px] text-[32px] transition-opacity delay-600 duration-500 ' +
             (mounted.value ? 'opacity-100' : 'opacity-0')
           }
         >
@@ -55,6 +55,6 @@ export default component$(() => {
           levels of experience in Python, Java, C++, and Rust.
         </p>
       </section>
-    </>
+    </div>
   )
 })

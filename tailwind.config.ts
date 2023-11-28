@@ -2,6 +2,11 @@ import type { Config } from 'tailwindcss'
 
 export default {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+  safelist: [
+    {
+      pattern: /delay-(\d*)/,
+    },
+  ],
   theme: {
     colors: {
       background: '#041421',
@@ -13,6 +18,15 @@ export default {
       sm: '550px',
       md: '950px',
       lg: '1200px',
+    },
+    extend: {
+      transitionDelay: {
+        '200': '200ms',
+        '400': '400ms',
+        '600': '600ms',
+        '800': '800ms',
+        '1000': '1000ms',
+      },
     },
   },
   corePlugins: {
