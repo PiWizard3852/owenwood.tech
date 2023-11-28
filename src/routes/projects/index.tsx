@@ -64,7 +64,7 @@ export default component$(() => {
               <div class='flex items-center justify-between pb-[3px]'>
                 <h2 class='text-[20px]'>{project.title}</h2>
                 <ul class='flex items-center justify-between'>
-                  <li class='pr-[3px]'>
+                  <li>
                     <Link
                       class='flex cursor-pointer items-center justify-center rounded-[5px] p-[5px] pr-[3px] duration-200 hover:bg-border'
                       href={project.repo}
@@ -83,10 +83,10 @@ export default component$(() => {
                       </svg>
                     </Link>
                   </li>
-                  <li class='flex cursor-pointer items-center justify-center rounded-[5px] p-[5px] pl-[3px] duration-200 hover:bg-border'>
-                    {project.url && (
+                  {project.url && (
+                    <li class='pl-[6px]'>
                       <Link
-                        class='cursor-pointer'
+                        class='flex cursor-pointer items-center justify-center rounded-[5px] p-[5px] duration-200 hover:bg-border'
                         href={project.url}
                         target='_blank'
                       >
@@ -100,8 +100,8 @@ export default component$(() => {
                           <path d='M440-280H280q-83 0-141.5-58.5T80-480q0-83 58.5-141.5T280-680h160v80H280q-50 0-85 35t-35 85q0 50 35 85t85 35h160v80ZM320-440v-80h320v80H320Zm200 160v-80h160q50 0 85-35t35-85q0-50-35-85t-85-35H520v-80h160q83 0 141.5 58.5T880-480q0 83-58.5 141.5T680-280H520Z' />
                         </svg>
                       </Link>
-                    )}
-                  </li>
+                    </li>
+                  )}
                 </ul>
               </div>
               <p class='py-[10px]'>{project.description}</p>
