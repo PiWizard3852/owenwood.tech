@@ -104,7 +104,7 @@ export default component$(() => {
                   )}
                 </ul>
               </div>
-              <p class='py-[10px]'>{project.description}</p>
+              <p class='py-[10px] font-extralight'>{project.description}</p>
               <ul class='flex flex-wrap'>
                 {project.tags.map((tag, index) => (
                   <li
