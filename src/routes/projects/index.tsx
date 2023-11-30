@@ -53,7 +53,7 @@ export default component$(() => {
             <li
               key={index}
               class={
-                `mb grid-span-1 mx-[10px] my-[10px] rounded-[5px] border border-border p-[15px] transition-all duration-500 delay-${
+                `mb grid-span-1 mx-[10px] my-[10px] rounded-[5px] border border-solid border-border p-[15px] transition-all duration-500 delay-${
                   200 * (index + 1)
                 } ` +
                 (mounted.value
