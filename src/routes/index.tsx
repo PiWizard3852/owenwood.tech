@@ -24,7 +24,7 @@ export default component$(() => {
             (mounted.value ? 'opacity-100' : 'translate-x-[-50px] opacity-0')
           }
         >
-          a high school student with a passion for programming.
+          a high school student with a passion for programming and robotics.
         </h3>
       </section>
       <hr
@@ -49,9 +49,10 @@ export default component$(() => {
           }
         >
           I am a student at Phillips Exeter Academy with an interest in software
-          engineering and computer science. The focus of my work has been
-          primarily in full stack web development, but I also have varying
-          levels of experience in Python, Java, C++, and Rust.
+          engineering and computer science. The majority of my projects relate
+          to robotics (control theory, computer vision, et. al.) and web
+          development, but I also have varying levels of experience in game and
+          app development.
         </p>
       </section>
     </div>

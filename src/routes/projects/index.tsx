@@ -12,28 +12,37 @@ export default component$(() => {
   const projects = [
     {
       title: 'owenwood.tech',
-      description: 'My personal portfolio, built in Qwik.',
+      description: 'My personal portfolio, built in Qwik',
       tags: ['typescript', 'qwik-city', 'tailwindcss', 'vercel'],
-      repo: 'https://github.com/PiWizard3852/Neovim-Config',
+      repo: 'https://github.com/PiWizard3852/owenwood.tech',
     },
     {
       title: 'Wayve',
-      description: 'A hobby social network, built in Qwik with PostgreSQL.',
+      description: 'A hobby social network, built in Qwik with PostgreSQL',
       tags: [
         'typescript',
         'qwik-city',
         'tailwindcss',
         'drizzle-orm',
         'postgresql',
+        'vercel',
       ],
       url: 'https://wayve.owenwood.tech',
       repo: 'https://github.com/PiWizard3852/Wayve',
     },
     {
-      title: 'Bananalyzer',
-      description: 'A banagrams solver with OpenCV built in Python.',
-      tags: ['python', 'opencv'],
-      repo: 'https://github.com/PiWizard3852/Wayve',
+      title: 'Scriptio-Java',
+      description:
+        'My CSC505 final project at Phillips Exeter Academy - An (incomplete) interpreted programming language with Latin keywords',
+      tags: ['java', 'gradle', 'interpreter', 'lexer', 'pratt-parser'],
+      repo: 'https://github.com/PiWizard3852/Scriptio-Java',
+    },
+    {
+      title: 'VTX',
+      description:
+        'A code-gen CLI for FTC robotics team 15534 VERTEX, written in Rust',
+      tags: ['rust', 'cli', 'ftc'],
+      repo: 'https://github.com/15534/VTX',
     },
   ]
 
