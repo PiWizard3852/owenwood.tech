@@ -31,6 +31,22 @@ export default component$(() => {
       repo: 'https://github.com/PiWizard3852/Wayve',
     },
     {
+      title: 'Helium',
+      description:
+        'An open source GPA manager for Phillips Exeter Academy students',
+      tags: [
+        'typescript',
+        'react',
+        'react-native',
+        'expo',
+        'tailwindcss',
+        'drizzle-orm',
+        'sqlite',
+        'entra-id',
+      ],
+      repo: 'https://github.com/Code-for-Campus/Helium',
+    },
+    {
       title: 'Scriptio-Java',
       description:
         'My CSC505 final project at Phillips Exeter Academy - An (incomplete) interpreted programming language with Latin keywords',
@@ -43,6 +59,12 @@ export default component$(() => {
         'A code-gen CLI for FTC robotics team 15534 VERTEX, written in Rust',
       tags: ['rust', 'cli', 'ftc'],
       repo: 'https://github.com/15534/VTX',
+    },
+    {
+      title: 'Neovim-Config',
+      description: 'My Neovim config, built on NvChad',
+      tags: ['lua', 'neovim', 'nvchad'],
+      repo: 'https://github.com/PiWizard3852/Neovim-Config',
     },
   ]
 
